@@ -61,14 +61,16 @@ void solve(string &s){
 		if(s.size() > 50)	cout<<"Nhap lai xau"<<endl;
 	}
 	while(s.size() > 50);//childsngchildgtsdchild
+	int cnt = 0;
 	string s1 = "child";
 	for(int i = 0; i <= s.size()-5; ++i){
 		string faker = s.substr(i, 5);
 		if(faker == s1){
+			++cnt;
 			s.replace(s.begin()+i, s.begin() +i+5, "children");
 		}
 	}
-	cout<<endl<<s;
+	cout<<endl<<cnt<<endl<<s;
 }
 //childsngchildgtsdchild
 int main()
